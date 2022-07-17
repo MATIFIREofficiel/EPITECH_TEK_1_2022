@@ -7,7 +7,7 @@
 
 int my_putchar(char c);
 
-void display_low_star(unsigned int size, int res, int space)
+static void display_low_star(unsigned int size, int res, int space)
 {
     int value = 3;
     int i = 1;
@@ -31,7 +31,7 @@ void display_low_star(unsigned int size, int res, int space)
     }
 }
 
-void display_middle_low_star(unsigned int size, int value, int space)
+static void display_middle_low_star(unsigned int size, int value, int space)
 {
     for (int a = 1; a <= size; a++) {
         for (int i = 0; i < 1 + a - 1; i++)
@@ -54,7 +54,7 @@ void display_middle_low_star(unsigned int size, int value, int space)
     display_low_star(size, value, space);
 }
 
-void display_middle_top_star(unsigned int size)
+static void display_middle_top_star(unsigned int size)
 {
     int value = 3;
     int space = 1;
@@ -73,7 +73,7 @@ void display_middle_top_star(unsigned int size)
     display_middle_low_star(size, value, space);
 }
 
-void display_top_star(unsigned int size)
+static void display_top_star(unsigned int size)
 {
     int value = 3;
     int i = 1;
